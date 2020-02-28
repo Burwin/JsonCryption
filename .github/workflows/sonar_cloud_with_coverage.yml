@@ -11,6 +11,10 @@ jobs:
     - name: test solution
       run: dotnet test --collect:"XPlat Code Coverage"
       working-directory: ./src
+    - name: install reportgenerator
+      run: dotnet tool install -g dotnet-reportgenerator-globaltool
+    - name: generate solution coverage report
+      run: reportgenerator "-reports:**\TestResults\**\coverage.cobertura.xml" "-targetdir:." "-reporttypes:SonarQube"
     - name: save artifacts
       uses: actions/upload-artifact@v1
       with:
