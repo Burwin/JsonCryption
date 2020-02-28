@@ -10,7 +10,7 @@ jobs:
       uses: Secbyte/dotnet-sonarscanner@v1.2
       with:
         buildCommand: dotnet build ./src
-        testCommand: dotnet test ./src --collect:"XPlat Code Coverage" --format:opencover
+        testCommand: dotnet test ./src --collect:"XPlat Code Coverage" --settings ./src/coverlet.runsettings
         projectKey: Burwin_JsonCryption
         projectName: JsonCryption
         sonarOrganisation: burwin
@@ -18,3 +18,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_V1 }}
+    - name: Upload coverage artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: Coverage
+        path: ./src/JsonCryption.*.Tests/TestResults/**/coverage*.xml
