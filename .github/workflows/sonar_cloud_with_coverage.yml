@@ -25,6 +25,8 @@ jobs:
       run: reportgenerator "-reports:./src/*/TestResults/*/coverage.cobertura.xml" "-targetdir:." "-reporttypes:SonarQube"
     - name: sonar end
       run: dotnet sonarscanner end -d:sonar.login=${{ secrets.SONAR_TOKEN_V1 }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: save artifacts
       uses: actions/upload-artifact@v1
       with:
