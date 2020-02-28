@@ -18,8 +18,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_V1 }}
-    - name: Upload coverage artifacts
-      uses: actions/upload-artifact@v1
-      with:
-        name: Coverage
-        path: ./src/JsonCryption.*.Tests/TestResults/**/coverage.opencover.xml
