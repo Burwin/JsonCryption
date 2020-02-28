@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: setup dotnet with global tool support
+      uses: casz/setup-dotnet@fix/dotnet-global-tool
+      with:
+        dotnet-version: '3.1.100'
     - name: build solution
       run: dotnet build ./src
     - name: test solution
