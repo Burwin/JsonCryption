@@ -10,7 +10,7 @@ jobs:
       uses: Secbyte/dotnet-sonarscanner@v1.2
       with:
         buildCommand: dotnet build ./src
-        testCommand: dotnet test /p:CollectCoverage=true  /p:CoverletOutput=../CoverageResults/ /p:MergeWith="../CoverageResults/coverage.json" /p:CoverletOutputFormat=\"opencover,json\" -m:1
+        testCommand: dotnet test ./src /p:CollectCoverage=true  /p:CoverletOutput=../CoverageResults/ /p:MergeWith="../CoverageResults/coverage.json" /p:CoverletOutputFormat=\"opencover,json\" -m:1
         projectKey: Burwin_JsonCryption
         projectName: JsonCryption
         sonarOrganisation: burwin
