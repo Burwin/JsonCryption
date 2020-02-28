@@ -1,5 +1,5 @@
 on: push
-name: SonarCloud
+name: SonarCloud with Coverage
 jobs:
   sonarCloudTrigger:
     name: SonarCloud Trigger
