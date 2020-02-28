@@ -9,7 +9,7 @@ jobs:
     - name: build solution
       run: dotnet build ./src
     - name: test solution
-      run: dotnet test /p:CollectCoverage=true  /p:CoverletOutput=./CoverageResults/ /p:MergeWith="./CoverageResults/coverage.json" /p:CoverletOutputFormat=\"opencover,json\" -m:1
+      run: dotnet test --collect:"XPlat Code Coverage"
       working-directory: ./src
     - name: save artifacts
       uses: actions/upload-artifact@v1
