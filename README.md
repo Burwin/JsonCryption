@@ -1,6 +1,6 @@
 # JsonCryption
-## Field-level Encryption during JSON Serialization
-JsonCryption offers field-level encryption when serializing from .NET objects to JSON, using `Microsoft.AspNetCore.DataProtection` for encryption, key/algo management, etc.
+## Field Level Encryption (FLE) during JSON Serialization
+JsonCryption offers Field Level Encryption (FLE) when serializing/deserializing .NET objects to/from JSON.
 
 ## !MOVED!
 Refer to the corresponding independent project for your particular serializer:
