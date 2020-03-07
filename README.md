@@ -5,4 +5,6 @@ JsonCryption offers field-level encryption when serializing from .NET objects to
 ## !OBSOLETE!
 Refer to the corresponding independent project for your particular serializer:
 - [JsonCryption.Newtonsoft](https://github.com/Burwin/JsonCryption.Newtonsoft)
-- [Utf8Json.FLE](https://github.com/Burwin/Uft8Json.FLE)
+- [JsonCryption.Utf8Json](https://github.com/Burwin/JsonCryption.Utf8Json)
+
+(These packages are completely independent of each other, so they should be treated as such. Hence, they're now split out from under this umbrella JsonCryption parent repository.)
